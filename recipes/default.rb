@@ -63,6 +63,8 @@ if node["collectd"]["plugins"]
   end
 end
 
+include_recipe "collectd::_redis"
+
 bash "install-collectd" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
