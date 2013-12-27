@@ -8,6 +8,7 @@ bash "install-credis" do
     cd credis-0.2.3
     make
     sudo cp -f libcredis.so /usr/lib/
+    make clean
     sudo cp -f ./* /usr/include/
   EOH
 end
